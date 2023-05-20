@@ -1,7 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass
 
-from pygame import color
 from data_types import PointMass, Link, FeatureToggle
 import pygame
 import math
@@ -182,6 +181,7 @@ class Cloth:
             self.display_text((0, 20), f"[G]ravity: {'ON' if self.gravity else 'OFF' }")
             self.display_text((0, 40), f"[W]ireframe: {'ON' if self.show_wireframe else 'OFF' }")
             self.display_text((0, 60), f"[C]loth: {'ON' if self.show_cloth else 'OFF' }")
+            self.display_text((0, 80), f"[R]eset")
 
         self.screen.blit(self.main_surface, self.camera)
         pygame.display.update()
